@@ -8,7 +8,7 @@
                 <div id="content"></div>
         </body>
         <script>
-                document.querySelector("#btn").onclick => {
+                document.querySelector("#btn").onclick = () => {
                         let reader = new FileReader();
                         reader.readAsBinaryString(this.files[0]);
                         reader.onload = function(event) {
