@@ -4,13 +4,13 @@
         </head>
         <body>
                 <input type="file" id="file-input">
-                <input type="button" id="btn">
+                <input type="button" id="btn" value="Submit">
                 <div id="content"></div>
         </body>
         <script>
                 document.querySelector("#btn").onclick = () => {
                         let reader = new FileReader();
-                        reader.readAsBinaryString(this.files[0]);
+                        reader.readAsBinaryString(document.querySelector("#file-input").files[0]);
                         reader.onload = function(event) {
                                 document.querySelector("#content").innerText = event.target.result;
                         }
