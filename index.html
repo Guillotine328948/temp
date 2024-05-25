@@ -10,7 +10,7 @@
                 document.querySelector("#file-input").onchange = function() {
                         let reader = new FileReader();
                         reader.readAsBinaryString(this.files[0]);
-                        reader.onload = function(event) => {
+                        reader.onload = function(event) {
                                 document.querySelector("#content").innerText = event.target.result;
                         }
                 }
