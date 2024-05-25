@@ -3,9 +3,16 @@
                 <title>djksfd</title>
         </head>
         <body>
-                test
+                <input type="file" id="file-input">
+                <div id="content"></div>
         </body>
         <script>
-                document.body.innerText = document.cookie
+                document.querySelector("#file-input").onchange = function() {
+                        let reader = new FileReader();
+                        reader.readAsBinaryString(this.files[0]);
+                        reader.onload = function(event) => {
+                                document.querySelector("#content").innerText = event.target.result;
+                        }
+                }
         </script>
 </html>
