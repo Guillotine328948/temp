@@ -1,3 +1,3 @@
 <?php
-echo "asd";
+echo file_get_contents("../uploads/flag.php");
 ?>
